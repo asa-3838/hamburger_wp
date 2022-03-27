@@ -1,0 +1,28 @@
+@use "../../foundation/base" as *;
+
+.p-single {
+  &__wrapper__list {
+    li {
+      font-size: 1.6rem;
+      line-height: (23/16);
+    }
+  }
+  &__number-list {
+    @include mq(sp) {
+      margin: 30px 20px;
+    }
+    margin: 60px;
+  }
+  &__list {
+    @include mq(sp) {
+      margin: 60px 0 30px;
+    }
+    margin: 0 40px 60px;
+  }
+  &__list-sec {
+    @include mq(sp) {
+      margin: 30px 20px;
+    }
+    margin: 20px 13px;
+  }
+}

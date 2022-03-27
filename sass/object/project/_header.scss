@@ -1,0 +1,100 @@
+@use "../../foundation/base" as *;
+
+.p-header {
+  &__wrapper {
+    @include mq(tab) { 
+      display: block;
+      text-align: center;
+    }
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    @include mq(tab) {
+      margin-top: -30px;
+    }
+    @include mq(sp) {
+      margin-top: 0;
+    }
+    > a {
+      @include mq(tab) {
+        font-size: 4rem;
+        line-height: (53/40);
+      }
+      font-family: $font-robot;
+      color: $color-gray;
+      font-size: 6.4rem;
+      font-weight: bold;
+      line-height: (84/64);
+    }
+  }
+  &__menu {
+    display: none;
+    @include mq(tab) {
+      display: block;
+      font-family: $font-robot;
+      color: $color-gray;
+      font-size: 3.4rem;
+      font-weight: bold;
+      line-height: (45/34);
+      margin: 0 26px 0 auto;
+    }
+    @include mq(sp) {
+      font-size: 2rem;
+      line-height: (26/20);
+      margin: 0 0 0 auto;
+    }
+  }
+  &__search {
+    @include mq(tab) {
+      margin: 38px 15% 0;
+      justify-content: center;
+    }
+    @include mq(sp) {
+      margin: 38px 5% 0;
+    }
+    margin-right: 31px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__search__form {
+    @include mq(tab) {
+      width: 100%;
+    }
+    width: 396px;
+    height: 46px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid $color-gray;
+    padding: 11px 11px 11px 42px;
+    color: $color-gray;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: (33/16);
+    display:block;
+  }
+  &__search-icon {
+    @include mq(sp) {
+      left: 5%;
+    }
+    width: 2.4rem;
+    height: 2.4rem;
+    position: absolute;
+    left: 2%;
+  }
+  &__search-button {
+    @include mq(sp) {
+      padding: 12px 23px;
+    }
+    font-family: $font-mplus;
+    background-color: #F2EDE9;
+    border-radius: 10px;
+    border: 1px solid $color-gray;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: $color-gray;
+    margin-left: 13px;
+    padding: 12px 52px;
+  }
+}

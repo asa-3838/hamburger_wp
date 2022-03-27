@@ -1,0 +1,17 @@
+.c-card {
+  &-figure {
+  display: flex;
+  justify-content: space-between;
+  }
+  &-img {
+    width: 44%;
+    max-width: 100%;
+  }
+  &-text {
+    width: 53%;
+    p {
+      font-size: 1.6rem;
+      line-height: (23/16);
+    }
+  }
+}

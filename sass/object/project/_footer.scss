@@ -1,0 +1,34 @@
+.p-footer {
+  &__copy-right {
+    position: relative;
+    .p-footer-shop {
+      margin-right: 13px;
+    }
+    .p-footer-history {
+      margin-left: 13px;
+    }
+    p,
+    a {
+      display: inline-block;
+      color: #fff;
+      font-size: 2rem;
+      line-height: (30/20);
+    }
+    p:first-child::after {
+      background-color: #fff;
+      position: absolute;
+      top: 8%;
+      left: 54%;
+      content: "";
+      width: 2px;
+      height: 20px;
+    }
+    small {
+      display: block;
+      padding-top: 34px;
+      color: #fff;
+      font-size: 1.4rem;
+      line-height: (20/14);
+    }
+  }
+}

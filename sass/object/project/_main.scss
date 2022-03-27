@@ -1,0 +1,96 @@
+@use "../../foundation/base" as *;
+
+.p-top-visual {
+  @include mq(tab) {
+    height: 285px;
+  }
+  @include mq(sp) {
+    background-size:contain;                           
+  }
+  background: url(../../images/home-top.png) no-repeat center/cover;
+  height: 530px;
+  &__title {
+    @include mq(sp) {
+      font-size: 3.6rem;
+      line-height: (54/36);
+      top: 41%;
+      left: 7%
+    }    
+    position: relative;
+    top: 44%;
+    left: 5%;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: (60/40);
+  }
+}
+
+.p-under-visual {
+  &-left {
+    @include mq(tab) {
+      height: 681px;
+      margin-right: 40px;
+    }
+    @include mq(sp) {
+      width: 100%;
+      height: 642px;
+      margin-right: 0;
+    }
+    background: url(../../images/takeout.png) no-repeat center/cover;
+    width: calc(50% - 40px / 2);
+    height: 1193px;
+    margin-right: 80px;
+    position:relative;
+    object-fit: cover;
+  } 
+  &-right {
+    @include mq(tab) {
+      height: 681px;
+    }
+    @include mq(sp) {
+      width: 100%;
+      height: 642px;
+      margin-top: 20px;
+    }
+    background: url(../../images/eatin.png) no-repeat center/cover;
+    width: calc(50% - 40px / 2);
+    height: 1193px;
+    position:relative;
+    object-fit: cover;
+  }
+}
+
+.l-under-visual {
+  h3,a {
+    @include mq(tab) {
+      font-size: 4.4rem;
+      font-weight: bold;
+      line-height: (58/44);
+      top: 7px;
+      left: 5px;
+    }
+    position: relative;
+    font-family: $font-robot;                     
+    color: #fff;
+    font-size: 8rem;
+    font-weight: bold;
+    line-height: (106/80);
+    top: 20px;
+    left: 20px;
+  }
+  h3::before {
+    @include mq(tab) {
+      width: 35px;
+      top: 82px;
+      left: 7px;
+    }
+    background-color: #fff;
+    position: absolute;
+    top: 160.5px;
+    left: 26.5px;
+    content: "";
+    width: 63px;
+    height: 4px;
+  }
+}

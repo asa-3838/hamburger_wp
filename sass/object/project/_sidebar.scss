@@ -1,0 +1,59 @@
+@use "../../foundation/base" as *;
+
+.p-sidebar {
+  &__title {
+    pointer-events: none;
+    @include mq(tab) {
+      display: none;
+    }
+    @include mq(sp) {
+      font-size: 2rem;
+      line-height: (26/20);
+    }
+    font-family: $font-robot;
+    font-size: 3.4rem;
+    font-weight: bold;
+    line-height: (45/34);
+    color: $color-gray;
+  }
+  &__main-ul:last-child {
+    @include mq(tab) {
+      padding-bottom: 503px;
+    }
+    @include mq(sp) {
+      padding-bottom: 1430px;
+    }
+  }
+  &__main-nav {
+    @include mq(tab) {
+    display: none;
+    }
+  }
+  &__menu {
+    margin-top: 85px;
+    @include mq(tab) {
+      margin: 38px 0 0 46px;
+    }
+    > a {
+      font-size: 2.4rem;
+      font-weight: bold;
+      line-height: (36/24);
+      color: $color-gray;
+    }
+  }
+  &__sub-ul {
+    margin-top: 40px;
+    margin-left: 66px;
+    @include mq(tab) {
+      margin-left: 20px;
+    }
+  }
+  &__menu-item {
+    margin-top: 22px;
+    > a {
+      font-size: 2rem;
+      line-height: (30/20);
+      color: $color-gray;
+    }
+  }
+}

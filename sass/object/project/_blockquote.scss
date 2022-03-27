@@ -1,0 +1,16 @@
+.p-single {
+  &__blockquote {
+    margin-top: 60px;
+    padding: 50px 60px 50px 50px;
+    background-color: #F5F5F5;
+    blockquote {
+      font-size: 1.6rem;
+      line-height: (23/16);
+    }
+    p {
+      margin-top: 60px;
+      font-size: 1.6rem;
+      line-height: (23/16);
+    }
+  }
+}
