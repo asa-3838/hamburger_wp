@@ -11,87 +11,99 @@
 
 .p-archive {
   &__card {
+    margin-top: 30px;
     @include mq(sp) {
       display: block;
       margin-top : 20.9px;
     }
+  }
+  &__card-inner {
     display: flex;
+    height: 80%;
     background-color: $color-brown;
-    margin-top: 30px;
-    img {
-      @include mq(tab) {
-        width: 50%;
-      }
-      @include mq(sp) {
-        width: 100%;
-      }
-      object-fit: cover;
+    @include mq(sp) {
+      display: block;
     }
-    &__text-box {
-      @include mq(tab) {
-        margin: 29px 56px 40px 35px;
-      }
-      @include mq(sp) {
-        margin: 30.5px 23px 43.7px 17px;
-      }
-      margin: 53px 104px 60px 63px;
+  }
+  &__card__img {
+    width: 50%;
+    object-fit: cover;
+    @include mq(sp) {
+      width: 100%;
+      height: 230px;
     }
-    &__title {
-      @include mq(tab) {
-        font-size: 2rem;
-        line-height: (30/20);
-      }
-      color: #fff;
-      font-size: 3.6rem;
-      font-weight: bold;
-      line-height: (54/36);
+  }
+  &__card__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    padding: 53px 5vw 60px 3.3vw;
+    background-color: $color-brown;
+    @include mq(tab) {
+      padding: 29px 6.8vw 40px 4.8vw;
     }
-    &__sub-title {
-      @include mq(tab) {
-        margin-top: 24px;
-        font-size: 1.6rem;
-        line-height: (23/16);
-      }
-      color: #fff;
-      font-size: 2.4rem;
-      font-weight: bold;
-      line-height: (36/24);
-      margin-top: 47px;
+    @include mq(sp) {
+      width: 100%;
+      height: 80%;
+      padding: 30.5px 23px 43.7px 17px;
     }
-    &__text {
-      @include mq(tab) {
-        margin-top: 10px;
-      }
-      @include mq(sp) {
-        padding-right: 40px;
-      }
-      color: #fff;
+  }
+  &__card__title {
+    color: #fff;
+    font-size: 1.9vw;
+    font-weight: bold;
+    line-height: (54/36);
+    @include mq(tab) {
+      font-size: 2rem;
+      line-height: (30/20);
+    }
+  }
+  &__card__sub-title {
+    color: #fff;
+    font-size: 1.3vw;
+    font-weight: bold;
+    line-height: (36/24);
+    margin-top: 47px;
+    @include mq(tab) {
+      margin-top: 24px;
       font-size: 1.6rem;
       line-height: (23/16);
-      margin-top: 17px;
     }
-    &__more-button {
+  }
+  &__card__description {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: (23/16);
+    margin-top: 17px;
+    @include mq(tab) {
+      margin-top: 10px;
+    }
+    @include mq(sp) {
+      padding-right: 40px;
+    }
+  }
+  &__card__more-button {
+    text-align: center;
+    margin-top: 60px;
+    flex-direction: column;
       @include mq(tab) {
-        margin-top: 40px;
+        margin-top: 9vh;
       }
       @include mq(sp) {
-        padding-bottom: 43.7px;
       }
-      text-align: center;
-      margin-top: 60px;
-      a {
-        @include mq(tab) {
-          padding: 10px 41px;
-          line-height: (17/16);
-        }
-        display: inline-block;
-        border-radius: 50px;
-        background-color: #fff;
-        padding: 27px 106px;
-        color: $color-gray;
-        font-size: 1.6rem;
-        font-weight: bold;
-        line-height: (33/16);
+    > a {
+      display: inline-block;
+      border-radius: 50px;
+      background-color: #fff;
+      padding: 4% 24%;
+      color: $color-gray;
+      font-size: 1.6rem;
+      font-weight: bold;
+      line-height: (33/16);
+      @include mq(tab) {
+        padding: 10px 41px;
+        line-height: (17/16);
       }
     }
   }

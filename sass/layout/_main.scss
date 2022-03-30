@@ -3,6 +3,7 @@
 .l-main {
   display: flex;
   position: relative;
+  overflow: hidden;
   &__body {
     position: relative;
     &.is-open {
@@ -14,19 +15,19 @@
     }
   }
   &__back {
-    display: block;
     @include mq(tab) {
       background-color: rgba(0, 0, 0, 0.5);
       position: absolute;
       top: 0;
       right: -100%;
-      width: 100%;
+      width: 0;
       min-height: 100%;
       z-index: 500;
     }
     &.is-open {
       @include mq(tab) {
-      right: 0;
+        width: 100%;
+        right: 0;
       }
     }
   }
@@ -38,14 +39,13 @@
     height: 100%;
   }
   &__right {
-    overflow: hidden;
     @include mq(tab) {
-      width: 44%;
+      width: 0;
       right: -100%;
       transition: right .5s;
     }
     @include mq(sp) {
-      width: 87%;
+      width: 0;
     }
     position: absolute;
     top: 0;

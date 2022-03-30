@@ -4,9 +4,9 @@
   @include mq(tab) {
     height: 285px;
   }
-  @include mq(sp) {
-    background-size:contain;                           
-  }
+  // @include mq(sp) {
+  //   background-size:contain;                           
+  // }
   background: url(../../images/home-top.png) no-repeat center/cover;
   height: 530px;
   &__title {

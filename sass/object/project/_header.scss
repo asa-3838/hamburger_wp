@@ -46,23 +46,21 @@
     }
   }
   &__search {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
     @include mq(tab) {
+      width: inherit;
       margin: 38px 15% 0;
       justify-content: center;
     }
     @include mq(sp) {
       margin: 38px 5% 0;
     }
-    margin-right: 31px;
-    display: flex;
-    align-items: center;
-    position: relative;
   }
   &__search__form {
-    @include mq(tab) {
-      width: 100%;
-    }
-    width: 396px;
+    width: 100%;
     height: 46px;
     background-color: #fff;
     border-radius: 10px;
@@ -76,7 +74,7 @@
   }
   &__search-icon {
     @include mq(sp) {
-      left: 5%;
+      left: 4%;
     }
     width: 2.4rem;
     height: 2.4rem;
