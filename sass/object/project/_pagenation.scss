@@ -1,14 +1,11 @@
 @use "../../foundation/base" as *;
 
 .p-pagenation {
+  margin: 150px 0 64px;
   @include mq(sp) {
     margin: 60.4px 5% 31px;
   }
-  margin: 150px 0 64px;
   &__ul {
-    @include mq(sp) {
-      justify-content: space-between;
-    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,26 +14,30 @@
     font-size: 1.6rem;
     font-weight: bold;
     line-height: (33/16);
+    @include mq(sp) {
+      justify-content: space-between;
+    }
   }
   &__title {
-    @include mq(sp) {
-      display: none;
-    }
     position: relative;
     display: inline-block;
     margin-right: 26px;
+    @include mq(sp) {
+      display: none;
+    }
   }
   &__li-common {
     font-size: 2.3rem;
     line-height: (23/16);
     a {
+      color: $color-gray;
       @include mq(sp) {
         vertical-align: middle;
       }
-      color: $color-gray;
     }
   }
   span {
+    display: none;
     @include mq(sp) {
       vertical-align: middle;
       display: inline-block;
@@ -45,7 +46,6 @@
       line-height: (23/16);
       margin:0 5px;
     }
-    display: none;
   }
   .before {
     margin-right: 26px;
@@ -54,11 +54,11 @@
     margin-left: 10px;
   }
   &__li-pc {
+    border: solid 1px $color-gray;
+    margin-right: 15px;
     @include mq(sp) {
       display: none;
     }
-    border: solid 1px $color-gray;
-    margin-right: 15px;
     a {
       display: block;
       padding: 1px 13px;

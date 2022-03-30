@@ -1,6 +1,9 @@
 @use "../../foundation/base" as *;
 
 .c-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
   @include mq(tab) {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
@@ -9,7 +12,4 @@
     grid-template-columns: 1fr;
     gap: 20px;
   }
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
 }

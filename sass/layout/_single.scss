@@ -1,11 +1,11 @@
 @use "../foundation/base" as *;
 
 .l-single__wrapper {
+  margin: 60px 6% 350px;
   @include mq(tab) {
     margin: 60px 6% 228px;
   }
   @include mq(sp) {
     margin: 30px 8% 177px;
   }
-  margin: 60px 6% 350px;
 }

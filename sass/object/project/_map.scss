@@ -11,21 +11,16 @@
     height: 100%;
   }
   &-mask1 {
-    @include mq(tab) {
-      padding: 40px 42px;
-      width: 100%;
-    }
-    @include mq(sp) {
-    }
     width: 61%;
     padding: 83px 120px; 
     position: relative;
     z-index: 300;
-  }
-  &-mask2 {
     @include mq(tab) {
       padding: 40px 42px;
+      width: 100%;
     }
+  }
+  &-mask2 {
     padding: 83px 120px;
     position: absolute;
     top: 0;
@@ -35,14 +30,11 @@
     height: 100%;
     background-color: rgb(0, 0, 0, 0.6);
     overflow: hidden;
+    @include mq(tab) {
+      padding: 40px 42px;
+    }
   }
   &-mask3 {
-    @include mq(tab) {
-      width: 100%;
-    }
-    @include mq(sp) {
-      height: 60%;
-    }
     padding: 83px 119px;
     position: absolute;
     top: 0;
@@ -52,18 +44,31 @@
     height: 100%;
     background-color: rgb(0, 0, 0, 0.29);
     overflow: hidden;
+    @include mq(tab) {
+      width: 100%;
+    }
+    @include mq(sp) {
+      height: 60%;
+    }
   }
   h5 {
-    @include mq(sp) {
-      font-size: 3rem;
-      line-height: (45/30);
-    }
     color: #fff;
     font-size: 3.6rem;
     font-weight: bold;
     line-height: (54/36);
+    @include mq(sp) {
+      font-size: 3rem;
+      line-height: (45/30);
+    }
   }
   h5::before {
+    background-color: #fff;
+    position: absolute;
+    top: 189.5px;
+    left: 119.5px;
+    content: "";
+    width: 75px;
+    height: 2px;
     @include mq(tab) {
       top: 113px;
       left: 42.5px;
@@ -72,15 +77,13 @@
       top: 102px;
       left: 42px;
     }
-    background-color: #fff;
-    position: absolute;
-    top: 189.5px;
-    left: 119.5px;
-    content: "";
-    width: 75px;
-    height: 2px;
   }
   p {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: (33/16);
+    margin-top: 119px;
     @include mq(tab) {
       margin-top: 40px;
     }
@@ -88,10 +91,5 @@
       font-size: 1.4rem;
       line-height: (33/14);
     }
-    color: #fff;
-    font-size: 1.6rem;
-    font-weight: bold;
-    line-height: (33/16);
-    margin-top: 119px;
   }
 }

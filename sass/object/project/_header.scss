@@ -2,12 +2,12 @@
 
 .p-header {
   &__wrapper {
+    display: flex;
+    justify-content: space-between;
     @include mq(tab) { 
       display: block;
       text-align: center;
     }
-    display: flex;
-    justify-content: space-between;
   }
   &__logo {
     @include mq(tab) {
@@ -17,15 +17,15 @@
       margin-top: 0;
     }
     > a {
-      @include mq(tab) {
-        font-size: 4rem;
-        line-height: (53/40);
-      }
       font-family: $font-robot;
       color: $color-gray;
       font-size: 6.4rem;
       font-weight: bold;
       line-height: (84/64);
+      @include mq(tab) {
+        font-size: 4rem;
+        line-height: (53/40);
+      }
     }
   }
   &__menu {
@@ -73,18 +73,15 @@
     display:block;
   }
   &__search-icon {
-    @include mq(sp) {
-      left: 4%;
-    }
     width: 2.4rem;
     height: 2.4rem;
     position: absolute;
     left: 2%;
+    @include mq(sp) {
+      left: 4%;
+    }
   }
   &__search-button {
-    @include mq(sp) {
-      padding: 12px 23px;
-    }
     font-family: $font-mplus;
     background-color: #F2EDE9;
     border-radius: 10px;
@@ -94,5 +91,8 @@
     color: $color-gray;
     margin-left: 13px;
     padding: 12px 52px;
+    @include mq(sp) {
+      padding: 12px 23px;
+    }
   }
 }

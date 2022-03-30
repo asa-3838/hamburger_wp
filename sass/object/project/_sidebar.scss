@@ -3,6 +3,11 @@
 .p-sidebar {
   &__title {
     pointer-events: none;
+    font-family: $font-robot;
+    font-size: 3.4rem;
+    font-weight: bold;
+    line-height: (45/34);
+    color: $color-gray;
     @include mq(tab) {
       display: none;
     }
@@ -10,11 +15,6 @@
       font-size: 2rem;
       line-height: (26/20);
     }
-    font-family: $font-robot;
-    font-size: 3.4rem;
-    font-weight: bold;
-    line-height: (45/34);
-    color: $color-gray;
   }
   &__main-ul:last-child {
     @include mq(tab) {

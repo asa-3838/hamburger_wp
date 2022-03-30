@@ -2,28 +2,28 @@
 
 .l-under-visual {
   .p-panel {
-    @include mq(tab) {
-      right: 10px;
-      left: 10px;
-      bottom: 10px;
-    }
     position: absolute;
     right: 20px;
     left: 20px;
     bottom: 20px;
     overflow: hidden;
+    @include mq(tab) {
+      right: 10px;
+      left: 10px;
+      bottom: 10px;
+    }
     &-box {
-      @include mq(tab) {
-        padding: 20px 10px;
-      }
       background-color: rgb(255, 255, 255, 0.8);
       min-height: 174px;
       padding: 17px 17px 17px 19px;
+      @include mq(tab) {
+        padding: 20px 10px;
+      }
       &:nth-of-type(2) {
+        margin-top: 30px;
         @include mq(tab) {
           margin-top: 10px;
         }
-        margin-top: 30px;
       }
     }
   }
@@ -33,11 +33,11 @@
     line-height: (36/24);
   }
   p {
-    @include mq(tab) {
-      margin-top: 20px;
-    }
     margin-top: 26px;
     font-size: 1.6rem;
     line-height: (23/16);
+    @include mq(tab) {
+      margin-top: 20px;
+    }
   }
 }

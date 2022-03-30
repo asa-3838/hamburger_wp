@@ -32,13 +32,20 @@
     }
   }
   &__left {
+    width: 80%;
+    height: 100%;
     @include mq(tab) {
       width: 100%;
       }
-    width: 80%;
-    height: 100%;
   }
   &__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 400;
+    width: 20%;
+    height: 100%;
+    background-color: $bgcolor-sub;
     @include mq(tab) {
       width: 0;
       right: -100%;
@@ -47,13 +54,6 @@
     @include mq(sp) {
       width: 0;
     }
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 400;
-    width: 20%;
-    height: 100%;
-    background-color: $bgcolor-sub;
     &.is-open {
       @include mq(tab) {
       position: absolute;
@@ -72,12 +72,12 @@
 }
 
 .l-under-visual {
-  @include mq(sp) {
-    display: block;
-    padding: 20px 20px 49px 20px;
-  }
   display: flex;
   height: auto;
   padding: 40px;
   position: relative;
+  @include mq(sp) {
+    display: block;
+    padding: 20px 20px 49px 20px;
+  }
 }

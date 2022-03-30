@@ -2,10 +2,10 @@
 
 .p-single {
   &__table {
+    margin-top: 50px;
     @include mq(sp) {
       margin-top: 30px;
     }
-    margin-top: 50px;
     table{
       width: 100%;
       border-collapse: collapse;
