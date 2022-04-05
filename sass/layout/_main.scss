@@ -49,7 +49,7 @@
     @include mq(tab) {
       width: 0;
       right: -100%;
-      transition: right .5s;
+      transition: .5s;
     }
     @include mq(sp) {
       width: 0;

@@ -203,7 +203,7 @@ body {
   .l-main__right {
     width: 0;
     right: -100%;
-    transition: right 0.5s;
+    transition: 0.5s;
   }
 }
 @media screen and (max-width: 599px) {
@@ -255,7 +255,7 @@ body {
 }
 
 .l-footer {
-  background: url(../../images/footer.png);
+  background: url(/wp-content/themes/hamburger/images/footer.png);
   height: 150px;
   display: flex;
   justify-content: center;
@@ -757,7 +757,7 @@ body {
 }
 
 .p-top-visual {
-  background: url(../../images/home-top.png) no-repeat center/cover;
+  background: url(/wp-content/themes/hamburger/images/home-top.png) no-repeat center/cover;
   height: 530px;
 }
 @media screen and (max-width: 1024px) {
@@ -784,7 +784,7 @@ body {
 }
 
 .p-under-visual-left {
-  background: url(../../images/takeout.png) no-repeat center/cover;
+  background: url(/wp-content/themes/hamburger/images/takeout.png) no-repeat center/cover;
   width: calc(50% - 20px);
   height: 1193px;
   margin-right: 80px;
@@ -805,7 +805,7 @@ body {
   }
 }
 .p-under-visual-right {
-  background: url(../../images/eatin.png) no-repeat center/cover;
+  background: url(/wp-content/themes/hamburger/images/eatin.png) no-repeat center/cover;
   width: calc(50% - 20px);
   height: 1193px;
   position: relative;

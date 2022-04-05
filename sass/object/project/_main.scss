@@ -1,7 +1,7 @@
 @use "../../foundation/base" as *;
 
 .p-top-visual {
-  background: url(../../images/home-top.png) no-repeat center/cover;
+  background: url(/wp-content/themes/hamburger/images/home-top.png) no-repeat center/cover;
   height: 530px;
   @include mq(tab) {
     height: 285px;
@@ -25,7 +25,7 @@
 
 .p-under-visual {
   &-left {
-    background: url(../../images/takeout.png) no-repeat center/cover;
+    background: url(/wp-content/themes/hamburger/images/takeout.png) no-repeat center/cover;
     width: calc(50% - 40px / 2);
     height: 1193px;
     margin-right: 80px;
@@ -42,7 +42,7 @@
     }
   } 
   &-right {
-    background: url(../../images/eatin.png) no-repeat center/cover;
+    background: url(/wp-content/themes/hamburger/images/eatin.png) no-repeat center/cover;
     width: calc(50% - 40px / 2);
     height: 1193px;
     position:relative;
