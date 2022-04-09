@@ -16,6 +16,11 @@
       line-height: (26/20);
     }
   }
+  &__main-nav {
+    @include mq(tab) {
+    display: none;
+    }
+  }
   &__main-ul:last-child {
     @include mq(tab) {
       padding-bottom: 503px;
@@ -23,22 +28,17 @@
     @include mq(sp) {
       padding-bottom: 1430px;
     }
-  }
-  &__main-nav {
-    @include mq(tab) {
-    display: none;
-    }
-  }
-  &__menu {
-    margin-top: 85px;
-    @include mq(tab) {
-      margin: 38px 0 0 46px;
-    }
-    > a {
-      font-size: 2.4rem;
-      font-weight: bold;
-      line-height: (36/24);
-      color: $color-gray;
+    > .p-sidebar__menu {
+      margin-top: 85px;
+      @include mq(tab) {
+        margin: 38px 0 0 46px;
+      }
+      > a {
+        font-size: 2.4rem;
+        font-weight: bold;
+        line-height: (36/24);
+        color: $color-gray;
+      }
     }
   }
   &__sub-ul {
@@ -47,13 +47,13 @@
     @include mq(tab) {
       margin-left: 20px;
     }
-  }
-  &__menu-item {
-    margin-top: 22px;
-    > a {
-      font-size: 2rem;
-      line-height: (30/20);
-      color: $color-gray;
+    > .p-sidebar__menu {
+      margin-top: 22px;
+      > a {
+        font-size: 2rem;
+        line-height: (30/20);
+        color: $color-gray;
+      }
     }
   }
 }
