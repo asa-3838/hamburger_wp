@@ -1178,7 +1178,6 @@ body {
   }
 }
 .p-archive__card__title {
-  color: #fff;
   font-size: 1.9vw;
   font-weight: bold;
   line-height: 1.5;
@@ -1188,6 +1187,9 @@ body {
     font-size: 2rem;
     line-height: 1.5;
   }
+}
+.p-archive__card__title > a {
+  color: #fff;
 }
 .p-archive__card__sub-title {
   color: #fff;
@@ -1395,12 +1397,6 @@ body {
     transform-origin: 100% 50%;
     left: auto;
     right: 14%;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .p-sidebar__main-nav {
-    display: block;
   }
 }
 

@@ -34,9 +34,4 @@
       }
     }
   }
-  .p-sidebar__main-nav {
-    @include mq(tab) {
-      display: block;
-    }
-  }
 

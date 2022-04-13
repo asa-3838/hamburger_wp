@@ -50,13 +50,15 @@
     }
   }
   &__card__title {
-    color: #fff;
     font-size: 1.9vw;
     font-weight: bold;
     line-height: (54/36);
     @include mq(tab) {
       font-size: 2rem;
       line-height: (30/20);
+    }
+    > a {
+      color: #fff;
     }
   }
   &__card__sub-title {
