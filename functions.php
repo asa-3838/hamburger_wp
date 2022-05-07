@@ -1,7 +1,7 @@
-<!-- css/googlefonts/jquery読み込み -->
 <?php
 function readScript()
 {
+  //css/googlefonts/jquery読み込み
   wp_enqueue_style('hamburger', get_theme_file_uri('/css/style.css'), array(), '');
   // wp_enqueue_style('roboto','http://fonts.googleapis.com',array(),'');
   // wp_enqueue_style('roboto','http://fonts.googleapis.com','crossorigin','');
@@ -25,6 +25,8 @@ function theme_setup()
   register_nav_menus(
     array(
       'sidebar-menu' => 'サイドバーメニュー',
+      'front-menu' => 'フロントメニュー',
+      'footer-menu' => 'フッターメニュー',
     )
   );
 }
@@ -65,3 +67,24 @@ function post_has_archive($args, $post_type)
   return $args;
 }
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
+
+// //サムネイルカラム追加
+// function customize_manage_posts_columns($columns) {
+//   $columns['thumbnail'] = __('Thumbnail');
+//   return $columns;
+// }
+// add_filter( 'manage_posts_columns', 'customize_manage_posts_columns' );
+
+// //サムネイル画像表示
+// function customize_manage_posts_custom_column($column_name, $post_id) {
+//   if ( 'thumbnail' == $column_name) {
+//       $thum = get_the_post_thumbnail($post_id, 'small', array( 'style'=>'width:100px;height:auto;' ));
+//   } if ( isset($thum) && $thum ) {
+//       echo $thum;
+//   } else {
+//       echo __('None');
+//   }
+// }
+// add_action( 'manage_posts_custom_column', 'customize_manage_posts_custom_column', 10, 2 );
+
+?>

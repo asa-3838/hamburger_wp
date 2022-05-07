@@ -5,7 +5,7 @@
 </div>
 <div class="l-under-visual">
   <div class="p-under-visual-left">
-    <h3><a href="<?php echo esc_url(home_url('')); ?>">Take Out</a></h3>
+    <h3>Take Out</h3>
     <div class="p-panel">
       <div class="p-panel-box">
         <h4>Take OUT</h4>
@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="p-under-visual-right">
-    <h3><a href="<?php echo esc_url(home_url('')); ?>">Eat In</a></h3>
+    <h3>Eat In</h3>
     <div class="p-panel">
       <div class="p-panel-box">
         <h4>Eat In</h4>

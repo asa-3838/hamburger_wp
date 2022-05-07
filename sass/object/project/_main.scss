@@ -29,7 +29,7 @@
     width: calc(50% - 40px / 2);
     height: 1193px;
     margin-right: 80px;
-    position:relative;
+    position: relative;
     object-fit: cover;
     @include mq(tab) {
       height: 681px;
@@ -45,7 +45,7 @@
     background: url(/wp-content/themes/hamburger/images/eatin.png) no-repeat center/cover;
     width: calc(50% - 40px / 2);
     height: 1193px;
-    position:relative;
+    position: relative;
     object-fit: cover;
     @include mq(tab) {
       height: 681px;
@@ -59,7 +59,7 @@
 }
 
 .l-under-visual {
-  h3,a {
+  h3 {
     position: relative;
     font-family: $font-robot;                     
     color: #fff;

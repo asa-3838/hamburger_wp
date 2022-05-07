@@ -1,20 +1,29 @@
 .p-footer {
   &__copy-right {
     position: relative;
-    .p-footer-shop {
-      margin-right: 13px;
+    small {
+      display: block;
+      padding-top: 34px;
+      color: #fff;
+      font-size: 1.4rem;
+      line-height: (20/14);
     }
-    .p-footer-history {
-      margin-left: 13px;
-    }
-    p,
+  }
+}
+
+.p-footer__copy-right {
+  .menu {
+    display: flex;
     a {
       display: inline-block;
       color: #fff;
       font-size: 2rem;
       line-height: (30/20);
     }
-    p:first-child::after {
+  }
+  li:first-child {
+    margin-right: 13px;
+    ::after {
       background-color: #fff;
       position: absolute;
       top: 8%;
@@ -23,12 +32,8 @@
       width: 2px;
       height: 20px;
     }
-    small {
-      display: block;
-      padding-top: 34px;
-      color: #fff;
-      font-size: 1.4rem;
-      line-height: (20/14);
-    }
+  }
+  li:last-child {
+    margin-left: 13px;
   }
 }
