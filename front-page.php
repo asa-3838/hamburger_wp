@@ -33,6 +33,7 @@
     </div>
   </a>
 </div>
+
 <div class="p-map-visual">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13108.64412707776!2d135.4781190697754!3d34.776721200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e5285d34d759%3A0xbe22903495910b60!2z5pyN6YOo57eR5Zyw!5e0!3m2!1sja!2sjp!4v1644627326607!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
   <div class="p-map-visual-mask1">
@@ -53,14 +54,12 @@
   <div class="p-map-visual-mask2"></div>
   <div class="p-map-visual-mask3"></div>
 </div>
+
 </div>
-</div>
+
 <div class="l-main__right">
-
-  <?php get_sidebar(); ?>
-
-</div>
-</div>
-</div>
-
-<?php get_footer(); ?>
+    <?php get_sidebar(); ?>
+  </div>
+  </div>
+  </div>
+  <?php get_footer(); ?>

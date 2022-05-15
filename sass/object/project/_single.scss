@@ -2,7 +2,6 @@
 
 .p-single__top {
   position: relative;
-  height: 500px;
   @include mq(sp) {
     height: 225px;
   }
@@ -10,7 +9,7 @@
     background: url("http://hamburgersite.local/wp-content/themes/hamburger/images/single-top.png") no-repeat center/cover;
   }
   &__title {
-    position: relative;
+    position: absolute;
     top: 41%;
     left: 5%;
     @include mq(tab) {

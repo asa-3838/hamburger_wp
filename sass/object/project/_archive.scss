@@ -3,7 +3,7 @@
 .p-archive {
   &__top {
     position: relative;
-    background: url(/wp-content/themes/hamburger/images/takeout.png) no-repeat center/cover;
+    background: url(http://hamburgersite.local/wp-content/themes/hamburger/images/takeout.png) no-repeat center/cover;
     background-color: rgba($color: #000000, $alpha: 0.5);
     height: 239px;
     @include mq(tab) {
@@ -24,7 +24,7 @@
     &__title {
       display: flex;
       align-items: center;
-      position: relative;
+      position: absolute;
       top: 36%;
       left: 5%;
       @include mq(sp) {

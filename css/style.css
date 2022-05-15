@@ -149,11 +149,10 @@ body {
   }
 }
 
-.l-main {
+.l-main__wrapper {
   display: flex;
-  position: relative;
-  overflow: hidden;
 }
+
 .l-main__body {
   position: relative;
 }
@@ -191,12 +190,9 @@ body {
   }
 }
 .l-main__right {
-  position: absolute;
-  top: 0;
-  right: 0;
   z-index: 400;
   width: 20%;
-  height: 100%;
+  height: auto;
   background-color: #f2ede9;
 }
 @media screen and (max-width: 1024px) {
@@ -287,7 +283,7 @@ body {
 }
 @media screen and (max-width: 599px) {
   .l-archive__wrapper {
-    margin: 30px 22px 60px;
+    margin: 30px 22px 30px;
   }
 }
 
@@ -343,7 +339,7 @@ body {
 
 .p-archive__top {
   position: relative;
-  background: url(/wp-content/themes/hamburger/images/takeout.png) no-repeat center/cover;
+  background: url(http://hamburgersite.local/wp-content/themes/hamburger/images/takeout.png) no-repeat center/cover;
   background-color: rgba(0, 0, 0, 0.5);
   height: 239px;
 }
@@ -369,7 +365,7 @@ body {
 .p-archive__top__title {
   display: flex;
   align-items: center;
-  position: relative;
+  position: absolute;
   top: 36%;
   left: 5%;
 }
@@ -432,7 +428,6 @@ body {
 
 .p-single__top {
   position: relative;
-  height: 500px;
 }
 @media screen and (max-width: 599px) {
   .p-single__top {
@@ -443,7 +438,7 @@ body {
   background: url("http://hamburgersite.local/wp-content/themes/hamburger/images/single-top.png") no-repeat center/cover;
 }
 .p-single__top__title {
-  position: relative;
+  position: absolute;
   top: 41%;
   left: 5%;
 }
@@ -555,7 +550,8 @@ body {
 }
 
 .p-shop__top-visual {
-  background: url(http://hamburgersite.local/wp-content/themes/hamburger/images/shop-top.png) no-repeat center/cover;
+  background: no-repeat center/cover;
+  height: 500px;
 }
 
 .p-header__wrapper {
@@ -671,12 +667,12 @@ body {
   }
 }
 
-.pagination {
+.p-pagination {
   margin: 150px 0 64px;
 }
 @media screen and (max-width: 599px) {
-  .pagination {
-    margin: 60.4px 5% 31px;
+  .p-pagination {
+    margin: 60.4px 0 31px;
   }
 }
 
@@ -692,8 +688,18 @@ body {
   line-height: 2.0625;
   font-weight: bold;
 }
+@media screen and (max-width: 599px) {
+  .wp-pagenavi {
+    justify-content: start;
+  }
+}
 .wp-pagenavi .pages {
   margin-right: 15px;
+}
+@media screen and (max-width: 599px) {
+  .wp-pagenavi .pages {
+    display: none;
+  }
 }
 .wp-pagenavi .current {
   background-color: #3C2B1C;
@@ -714,15 +720,57 @@ body {
   color: #FFFFFF;
 }
 .wp-pagenavi .first {
-  font-size: 2.3rem;
+  font-size: 2.6rem;
   line-height: 1.4375;
   font-weight: normal;
   margin-right: 15px;
 }
+@media screen and (max-width: 599px) {
+  .wp-pagenavi .first {
+    display: none;
+  }
+}
 .wp-pagenavi .last {
-  font-size: 2.3rem;
+  font-size: 2.6rem;
   line-height: 1.4375;
   font-weight: normal;
+}
+@media screen and (max-width: 599px) {
+  .wp-pagenavi .last {
+    display: none;
+  }
+}
+.wp-pagenavi .last > span {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .wp-pagenavi .last > span {
+    display: inline-block;
+    font-weight: normal;
+  }
+}
+.wp-pagenavi .previouspostslink {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .wp-pagenavi .previouspostslink {
+    display: block;
+    font-size: 2.6rem;
+    margin: 0 0 auto 0;
+  }
+}
+.wp-pagenavi .next {
+  margin-right: 6px;
+}
+.wp-pagenavi .nextpostslink {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .wp-pagenavi .nextpostslink {
+    display: block;
+    font-size: 2.6rem;
+    margin: 0 0 0 auto;
+  }
 }
 
 .p-top-visual {
@@ -1049,6 +1097,9 @@ body {
     display: none;
   }
 }
+.p-sidebar__main-ul:last-child {
+  padding-bottom: 200px;
+}
 @media screen and (max-width: 1024px) {
   .p-sidebar__main-ul:last-child {
     padding-bottom: 503px;
@@ -1163,7 +1214,7 @@ body {
     line-height: 1.5;
   }
 }
-.p-archive__card__sub-title {
+.p-archive__card__text h2 {
   color: #fff;
   font-size: 1.3vw;
   font-weight: bold;
@@ -1171,25 +1222,25 @@ body {
   margin-top: 47px;
 }
 @media screen and (max-width: 1024px) {
-  .p-archive__card__sub-title {
+  .p-archive__card__text h2 {
     margin-top: 24px;
     font-size: 1.6rem;
     line-height: 1.4375;
   }
 }
-.p-archive__card__description {
+.p-archive__card__text p {
   color: #fff;
   font-size: 1.6rem;
   line-height: 1.4375;
   margin-top: 17px;
 }
 @media screen and (max-width: 1024px) {
-  .p-archive__card__description {
+  .p-archive__card__text p {
     margin-top: 10px;
   }
 }
 @media screen and (max-width: 599px) {
-  .p-archive__card__description {
+  .p-archive__card__text p {
     padding-right: 40px;
   }
 }

@@ -22,12 +22,13 @@
     }
   }
   &__main-ul:last-child {
-    @include mq(tab) {
-      padding-bottom: 503px;
-    }
-    @include mq(sp) {
-      padding-bottom: 1430px;
-    }
+    padding-bottom: 200px;
+      @include mq(tab) {
+        padding-bottom: 503px;
+      }
+      @include mq(sp) {
+        padding-bottom: 1430px;
+      }
     > .p-sidebar__menu {
       margin-top: 85px;
       @include mq(tab) {

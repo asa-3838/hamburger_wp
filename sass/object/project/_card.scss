@@ -61,28 +61,30 @@
       line-height: (30/20);
     }
   }
-  &__card__sub-title {
-    color: #fff;
-    font-size: 1.3vw;
-    font-weight: bold;
-    line-height: (36/24);
-    margin-top: 47px;
-    @include mq(tab) {
-      margin-top: 24px;
+  &__card__text {
+    h2 {
+      color: #fff;
+      font-size: 1.3vw;
+      font-weight: bold;
+      line-height: (36/24);
+      margin-top: 47px;
+      @include mq(tab) {
+        margin-top: 24px;
+        font-size: 1.6rem;
+        line-height: (23/16);
+      }
+    }
+    p {
+      color: #fff;
       font-size: 1.6rem;
       line-height: (23/16);
-    }
-  }
-  &__card__description {
-    color: #fff;
-    font-size: 1.6rem;
-    line-height: (23/16);
-    margin-top: 17px;
-    @include mq(tab) {
-      margin-top: 10px;
-    }
-    @include mq(sp) {
-      padding-right: 40px;
+      margin-top: 17px;
+      @include mq(tab) {
+        margin-top: 10px;
+      }
+      @include mq(sp) {
+        padding-right: 40px;
+      }
     }
   }
   &__card__more-button {

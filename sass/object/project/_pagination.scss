@@ -1,9 +1,9 @@
 @use "../../foundation/base" as *;
 
-.pagination {
+.p-pagination {
   margin: 150px 0 64px;
   @include mq(sp) {
-    margin: 60.4px 5% 31px;
+    margin: 60.4px 0 31px;
   }
 }
 
@@ -18,11 +18,15 @@
     line-height: (33/16);
     font-weight: bold;
   }
-  // @include mq(sp) {
-  //   justify-content: space-between;
-  // }
+  @include mq(sp) {
+    justify-content: start;
+  }
+
   .pages {
     margin-right: 15px;
+    @include mq(sp) {
+      display: none;
+    }
   }
   .current {
     background-color: #3C2B1C;
@@ -41,51 +45,50 @@
   }
   }
   .first {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     line-height: (23/16);
     font-weight: normal;
     margin-right: 15px;
+    @include mq(sp) {
+      display: none;
+    }
   }
+
   .last {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
     line-height: (23/16);
     font-weight: normal;
-    // @include mq(sp) {
-    //   vertical-align: middle;
-    // }
+    @include mq(sp) {
+      display: none;
+    }
+  }
+
+  .last > span {
+    display: none;
+    @include mq(sp) {
+      display: inline-block;
+      font-weight: normal;
+    }
+  }
+
+  .previouspostslink {
+    display: none;
+    @include mq(sp) {
+      display: block;
+      font-size: 2.6rem;
+      margin: 0 0 auto 0;
+    }
+  }
+  .next {
+    margin-right: 6px;
+  }
+
+  .nextpostslink {
+    display: none;
+    @include mq(sp) {
+      display: block;
+      font-size: 2.6rem;
+      margin: 0 0 0 auto;
+    }
   }
 }
-
-
-
-
-// .current, .page {
-//   border: solid 1px $color-gray;
-//   margin-right: 15px;
-//   padding: 0 12px;
-//   @include mq(sp) {
-//     display: none;
-//   }
-//   &:hover {
-//     background-color: $color-brown;
-//     color: #FFFFFF;
-//   }
-// }
-
-  // span {
-  //   display: none;
-  //   @include mq(sp) {
-  //     vertical-align: middle;
-  //     display: inline-block;
-  //     font-size: 1.6rem;
-  //     font-weight: 400;
-  //     line-height: (23/16);
-  //     margin:0 5px;
-  //   }
-  // }
-  // .before {
-  //   margin-right: 26px;
-  // }
-  // .next {
-  //   margin-left: 10px;
-  // }
