@@ -138,6 +138,8 @@ function change_posts_paging($query) {
   //カスタムポストタイプ（ex. music ）を含む場合もここに追加します。
   //$query->set( 'post_type', array( 'post', 'page', 'music' ) );
 
+  //本体ギャラリーCSS停止
+  add_filter( 'use_default_gallery_style', '__return_false' );
 
 ?>
 

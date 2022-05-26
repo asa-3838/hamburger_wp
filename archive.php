@@ -3,18 +3,15 @@
   <div class="p-archive__top">
 
     <?php if ( is_category('side') ): //カテゴリースラッグがsideの場合
-      echo '<div class="p-archive__top" style="background-image:url(http://hamburgersite.local/wp-content/uploads/2022/04/side_potate-2.jpg);"></div>';
+      echo '<div class="p-archive__top" style="background-image:url(/wp-content/uploads/2022/04/side_potate-2.jpg);"></div>';
     ?> 
+  
     <?php elseif ( is_category('drink') ): //カテゴリースラッグがdrinkの場合 
-      echo '<div class="p-archive__top" style="background-image:url(http://hamburgersite.local/wp-content/uploads/2022/04/drink_orange-2.jpg);"></div>';
+      echo '<div class="p-archive__top" style="background-image:url(/wp-content/uploads/2022/04/drink_orange-2.jpg);"></div>';
     ?>
     <?php else: //上記以外
-      echo '<div class="p-archive__top" style="background-image:url(http://hamburgersite.local/wp-content/themes/hamburger/images/takeout.png);"></div>';
-    ?>
+      echo '<div class="p-archive__top" style="background-image:url(/wp-content/themes/hamburger/images/takeout.png);"></div>';?>
     <?php endif; ?>
-
-
-
 
 
     <div class="p-archive__top__title">

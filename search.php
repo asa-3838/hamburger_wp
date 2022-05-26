@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="p-archive__top">
-
+  <?php echo '<div class="p-archive__top" style="background-image:url(/wp-content/themes/hamburger/images/takeout.png);"></div>';?>
   <div class="p-archive__top__title">
     <h2>Search:</h2>
     <p><?php the_search_query(); ?></p>

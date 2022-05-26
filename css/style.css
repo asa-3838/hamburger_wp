@@ -251,7 +251,7 @@ body {
 }
 
 .l-footer {
-  background: url(/wp-content/themes/hamburger/images/footer.png);
+  background: url("../images/footer.png");
   height: 150px;
   display: flex;
   justify-content: center;
@@ -319,11 +319,6 @@ body {
   }
 }
 
-.c-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
 @media screen and (max-width: 1024px) {
   .c-grid {
     grid-template-columns: 1fr 1fr;
@@ -339,7 +334,7 @@ body {
 
 .p-archive__top {
   position: relative;
-  background: url(http://hamburgersite.local/wp-content/themes/hamburger/images/takeout.png) no-repeat center/cover;
+  background: no-repeat center/cover;
   background-color: rgba(0, 0, 0, 0.5);
   height: 239px;
 }
@@ -426,16 +421,21 @@ body {
   }
 }
 
+.wp-block-gallery.has-nested-images.columns-1 figure.wp-block-image:not(#individual-image) {
+  width: 100px;
+}
+
 .p-single__top {
   position: relative;
 }
+.p-single__top-visual {
+  background: no-repeat center/cover;
+  height: 500px;
+}
 @media screen and (max-width: 599px) {
-  .p-single__top {
+  .p-single__top-visual {
     height: 225px;
   }
-}
-.p-single__top-visual {
-  background: url("http://hamburgersite.local/wp-content/themes/hamburger/images/single-top.png") no-repeat center/cover;
 }
 .p-single__top__title {
   position: absolute;
@@ -470,81 +470,84 @@ body {
   }
 }
 
-.p-single__text h2 {
+.p-single__text > h2 {
   font-size: 3.6rem;
   font-weight: bold;
   line-height: 1.5;
 }
-.p-single__text p {
+.p-single__text > p {
   margin-top: 60px;
   font-size: 1.6rem;
   line-height: 1.4375;
 }
 @media screen and (max-width: 599px) {
-  .p-single__text p {
+  .p-single__text > p {
     margin-top: 30px;
   }
 }
-.p-single__text h3 {
+.p-single__text > h3 {
   margin-top: 60px;
   font-size: 2.8rem;
   font-weight: bold;
   line-height: 1.5;
 }
 @media screen and (max-width: 599px) {
-  .p-single__text h3 {
+  .p-single__text > h3 {
     margin-top: 30px;
   }
 }
-.p-single__text h4, .p-single__text h5, .p-single__text h6 {
+.p-single__text > h4, .p-single__text h5, .p-single__text h6 {
   margin-top: 60px;
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.5;
 }
 @media screen and (max-width: 599px) {
-  .p-single__text h4, .p-single__text h5, .p-single__text h6 {
+  .p-single__text > h4, .p-single__text h5, .p-single__text h6 {
     margin-top: 30px;
   }
 }
-.p-single__secondary-visual {
+.p-single__text .wp-block-columns {
   margin-top: 60px;
+  width: 100%;
+  overflow: hidden;
 }
 @media screen and (max-width: 599px) {
-  .p-single__secondary-visual {
+  .p-single__text .wp-block-columns {
+    display: block;
     margin-top: 30px;
   }
 }
-.p-single__secondary-visual img {
+.p-single__text__secondary-visual > img {
   width: 100%;
   height: 264px;
   object-fit: cover;
   object-position: bottom;
 }
-.p-single__tertiary-visual {
+.p-single__text__tertiary-visual {
   width: 44%;
   height: auto;
   margin: 60px auto;
 }
 @media screen and (max-width: 1024px) {
-  .p-single__tertiary-visual {
+  .p-single__text__tertiary-visual {
     width: 70%;
     margin: 60px auto 240px;
   }
 }
 @media screen and (max-width: 599px) {
-  .p-single__tertiary-visual {
+  .p-single__text__tertiary-visual {
     margin: 30px;
   }
 }
-.p-single__bottom {
+.p-single__text__bottom {
   margin-top: 60px;
   font-size: 1.6rem;
   font-weight: bold;
   line-height: 1.4375;
 }
 @media screen and (max-width: 599px) {
-  .p-single__bottom {
+  .p-single__text__bottom {
     margin-top: 30px;
   }
 }
@@ -774,7 +777,7 @@ body {
 }
 
 .p-top-visual {
-  background: url(/wp-content/themes/hamburger/images/home-top.png) no-repeat center/cover;
+  background: url("../images/home-top.png") no-repeat center/cover;
   height: 530px;
 }
 @media screen and (max-width: 1024px) {
@@ -801,7 +804,7 @@ body {
 }
 
 .p-under-visual-left {
-  background: url(/wp-content/themes/hamburger/images/takeout.png) no-repeat center/cover;
+  background: url("../images/takeout.png") no-repeat center/cover;
   width: calc(50% - 20px);
   height: 1193px;
   margin-right: 80px;
@@ -822,7 +825,7 @@ body {
   }
 }
 .p-under-visual-right {
-  background: url(/wp-content/themes/hamburger/images/eatin.png) no-repeat center/cover;
+  background: url("../images/eatin.png") no-repeat center/cover;
   width: calc(50% - 20px);
   height: 1193px;
   position: relative;
@@ -1271,19 +1274,25 @@ body {
   }
 }
 
-.p-single__blockquote {
+.p-single__text .wp-block-quote {
   margin-top: 60px;
   padding: 50px 60px 50px 50px;
   background-color: #F5F5F5;
 }
-.p-single__blockquote blockquote {
+.p-single__text .wp-block-quote p {
+  margin-bottom: 60px;
   font-size: 1.6rem;
   line-height: 1.4375;
 }
-.p-single__blockquote p {
+.p-single__text .wp-block-quote cite {
   margin-top: 60px;
+  font-style: normal;
   font-size: 1.6rem;
   line-height: 1.4375;
+}
+.p-single__text .wp-block-quote cite > a {
+  color: #4A6C9B;
+  text-decoration: underline;
 }
 
 .p-single__wrapper__list li {

@@ -1,16 +1,23 @@
-.p-single {
-  &__blockquote {
+.p-single__text {
+  .wp-block-quote {
     margin-top: 60px;
     padding: 50px 60px 50px 50px;
     background-color: #F5F5F5;
-    blockquote {
+    p {
+      margin-bottom: 60px;
       font-size: 1.6rem;
       line-height: (23/16);
     }
-    p {
+    cite {
       margin-top: 60px;
+      font-style: normal;
+      
       font-size: 1.6rem;
       line-height: (23/16);
+      > a {
+        color: #4A6C9B;
+        text-decoration: underline;
+      }
     }
   }
 }
