@@ -1,37 +1,37 @@
 @use "../../foundation/base" as *;
 
-  .p-sidebar__button.is-open {
-    @include mq(tab) {
-      margin: 25px 25px 117px auto ;
+.p-sidebar__button.is-open {
+  @include mq(tab) {
+    margin: 25px 25px 117px auto ;
+    display: block;
+    width: 35px;/*枠の大きさ*/
+    height: 35px;/*枠の大きさ*/
+    background-color: $bgcolor-sub;
+    position: relative;
+  }
+&::before, &::after{
+  @include mq(tab) {
+    content: "";
+    width: 100%;/*バツ線の長さ*/
+    height: 5px;/*バツ線の太さ*/
+    background: #707070;
+    transform: rotate(45deg);
+    transform-origin:0% 50%;
+    position: absolute;
+    top: calc(14% - 5px);
+    left: 14%;
+    > a {
       display: block;
-      width: 35px;/*枠の大きさ*/
-      height: 35px;/*枠の大きさ*/
-      background-color: $bgcolor-sub;
-      position: relative;
-    }
-  &::before, &::after{
-    @include mq(tab) {
-      content: "";
-      width: 100%;/*バツ線の長さ*/
-      height: 5px;/*バツ線の太さ*/
-      background: #707070;
-      transform: rotate(45deg);
-      transform-origin:0% 50%;
-      position: absolute;
-      top: calc(14% - 5px);
-      left: 14%;
-      > a {
-        display: block;
-      }
     }
   }
-  &::after{
-    @include mq(tab) {
-      transform: rotate(-45deg);
-      transform-origin:100% 50%;
-      left: auto;
-      right: 14%;
-      }
+}
+&::after{
+  @include mq(tab) {
+    transform: rotate(-45deg);
+    transform-origin:100% 50%;
+    left: auto;
+    right: 14%;
     }
   }
+}
 

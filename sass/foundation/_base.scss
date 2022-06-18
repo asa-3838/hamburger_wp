@@ -25,7 +25,7 @@ $bgcolor-footer: #9d8670;
 /* responsive */
 $breakpoint: (
   tab: 'screen and (max-width: 1024px)',
-  sp: 'screen and (max-width: 599px)'        
+  sp: 'screen and (max-width: 600px)'        
 );
 
 @mixin mq($bp) {

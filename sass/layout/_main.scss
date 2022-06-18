@@ -1,20 +1,14 @@
 @use "../foundation/base" as *;
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .l-main__wrapper {
   display: flex;
 }
 
 .l-main {
-  &__body {
-    position: relative;
-    &.is-open {
-      @include mq(tab) {
-        position: fixed;
-        top: 0;
-        right: 0;
-      }
-    }
-  }
   &__back {
     @include mq(tab) {
       background-color: rgba(0, 0, 0, 0.5);
@@ -48,16 +42,13 @@
     @include mq(tab) {
       width: 0;
       right: -100%;
-      transition: .5s;
-    }
-    @include mq(sp) {
-      width: 0;
     }
     &.is-open {
       @include mq(tab) {
       position: absolute;
       top: 0;
       right: 0;
+      transition: right .5s;
       width: 44%;
       height: 100vh;
       z-index: 1000;
@@ -74,9 +65,8 @@
   display: flex;
   height: auto;
   padding: 40px;
-  position: relative;
   @include mq(sp) {
-    display: block;
+    flex-flow: column;
     padding: 20px 20px 49px 20px;
   }
 }

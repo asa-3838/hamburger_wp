@@ -16,11 +16,6 @@
       line-height: (26/20);
     }
   }
-  &__main-nav {
-    @include mq(tab) {
-    display: none;
-    }
-  }
   &__main-ul:last-child {
     padding-bottom: 200px;
       @include mq(tab) {
@@ -55,6 +50,20 @@
         line-height: (30/20);
         color: $color-gray;
       }
+    }
+  }
+}
+
+.p-sidebar__main-nav {
+  @include mq(tab) {
+  display: none;
+  }
+}
+
+.l-main__right.is-open {
+  .p-sidebar__main-nav { 
+    @include mq(tab) {
+      display: block;
     }
   }
 }

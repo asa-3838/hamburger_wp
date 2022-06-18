@@ -3,10 +3,23 @@
 .l-sidebar {
   margin-top: 82px;
   margin-left: 17%;
-  width: 100%;
+  width: auto;
   height: 100%;
   @include mq(tab) {
     margin: 0;
     padding: 0;
+  }
+}
+
+.p-sidebar__main-nav {
+  @include mq(tab) {
+  display: none;
+  }
+}
+.l-main__right.is-open {
+  .p-sidebar__main-nav { 
+    @include mq(tab) {
+      display: block;
+    }
   }
 }

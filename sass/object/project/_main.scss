@@ -4,6 +4,7 @@
   background: url("../images/home-top.png") no-repeat center/cover;
   height: 530px;
   @include mq(tab) {
+    overflow: hidden;
     height: 285px;
   }
   &__title {

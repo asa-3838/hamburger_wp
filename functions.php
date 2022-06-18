@@ -1,14 +1,12 @@
 <?php
 function readScript()
 {
-  //css/googlefonts/jquery読み込み
+  //css/googlefonts/jquery/js読み込み
   wp_enqueue_style('hamburger', get_theme_file_uri('/css/style.css'), array(), '');
-  // wp_enqueue_style('roboto','http://fonts.googleapis.com',array(),'');
-  // wp_enqueue_style('roboto','http://fonts.googleapis.com','crossorigin','');
   wp_enqueue_style('roboto', 'http://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap', array(), '');
   wp_enqueue_style('mplus', 'http://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap', array(), '');
   wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.4.1.min.js', '', '', true);
-  // wp_enqueue_script('text/javascript', get_theme_file_uri("/js/script.js"),'jquery',$theme_version,true);
+  wp_enqueue_script('text/javascript', get_theme_file_uri("/js/index.js"),'jquery','', true);
 }
 
 add_action("wp_enqueue_scripts", "readScript");
@@ -81,7 +79,7 @@ if (!$wp_query->is_search)
   if (!isset($wp_query->query_vars))
   return $search;
   
-// タグ名・カテゴリ名も検索対象に
+//タグ名・カテゴリ名も検索対象に
 $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->query_vars['s'] : '');
   if ( count($search_words) > 0 ) {
     $search = '';
@@ -110,36 +108,28 @@ $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->quer
   add_filter('posts_search','custom_search', 10, 2);
 
 
-   //pre_get_posts で 検索結果のクエリーに条件を追加
+//pre_get_posts で 検索結果のクエリーに条件を追加
 function change_posts_paging($query) {
 
-  // 管理画面やメインクエリーでない場合は除外
+  //管理画面やメインクエリーでない場合は除外
   if ( is_admin() || ! $query->is_main_query() ) {
     return;
   }
-  // 検索結果ページ
+  //検索結果ページ
   if ( $query->is_search() ) {
-    // 公開されてる記事のみ検索
+    //公開されてる記事のみ検索
     $query->set( 'post_status', 'publish' );
-    // 投稿のみ検索
+    //投稿のみ検索
     $query->set( 'post_type', 'post' );
-    // 表示したくないカテゴリーID
+    //表示したくないカテゴリーID
     $query->set( 'category__not_in', 1 );
-    //　表示したくない投稿ID。arrayで複数指定可。
+    //表示したくない投稿ID。arrayで複数指定可。
     $query->set( 'post__not_in', array( 1, 2, 3, 4, 5 ) );
-    //　検索結果の表示順
+    //検索結果の表示順
     $query->set( 'order', 'ASC' );
     return;
   }
   }
   add_action( 'pre_get_posts', 'change_posts_paging' );
   
-  //投稿タイプを追加する場合は、array 型で記述します。
-  //カスタムポストタイプ（ex. music ）を含む場合もここに追加します。
-  //$query->set( 'post_type', array( 'post', 'page', 'music' ) );
-
-  //本体ギャラリーCSS停止
-  add_filter( 'use_default_gallery_style', '__return_false' );
-
 ?>
-

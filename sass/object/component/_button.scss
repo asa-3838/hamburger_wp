@@ -1,15 +1,23 @@
 @use "../../foundation/base" as *;
 
-.c-button {
-  display: inline-block;
-  background-color: #F2EDE9;
-  padding: 41px 190px;
-  font-size: 1.6rem;
-  font-weight: bold;
-  line-height: (23/16);
-  border: 1px solid $color-gray;
-  border-radius: 20px;
-  @include mq(sp) {
-    padding: 28px 132px;
+.wp-block-button {
+  width: 100%;
+  &__link {
+    margin: 60px 0 0;
+    padding: 41px 190px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: (23/16);
+    color: inherit;
+    background-color: #F2EDE9;
+    border: 1px solid $color-gray;
+    border-radius: 20px;
+    @include mq(sp) {
+      display: block;
+      padding: 28px 0 31px;
+    }
+  }
+  > a:hover {
+    color: inherit;
   }
 }
