@@ -85,7 +85,7 @@ $search_words = explode(' ', isset($wp_query->query_vars['s']) ? $wp_query->quer
     $search = '';
     foreach ( $search_words as $word ) {
       if ( !empty($word) ) {
-        $search_word = $wpdb->escape("%{$word}%");
+        $search_word = $wpdb->prepare("%{$word}%");
         $search .= " AND (
             {$wpdb->posts}.post_title LIKE '{$search_word}'
             OR {$wpdb->posts}.post_content LIKE '{$search_word}'
