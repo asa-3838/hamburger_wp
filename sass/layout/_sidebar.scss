@@ -10,16 +10,3 @@
     padding: 0;
   }
 }
-
-.p-sidebar__main-nav {
-  @include mq(tab) {
-  display: none;
-  }
-}
-.l-main__right.is-open {
-  .p-sidebar__main-nav { 
-    @include mq(tab) {
-      display: block;
-    }
-  }
-}

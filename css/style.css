@@ -150,13 +150,12 @@ body {
 }
 
 body.no-scroll {
-  overflow: hidden;
+  position: fixed;
 }
 
 .l-main__wrapper {
   display: flex;
 }
-
 @media screen and (max-width: 1024px) {
   .l-main__back {
     background-color: rgba(0, 0, 0, 0.5);
@@ -212,6 +211,10 @@ body.no-scroll {
     width: 87%;
   }
 }
+.l-main__right.is-open::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none;
+}
 
 .l-under-visual {
   display: flex;
@@ -235,18 +238,6 @@ body.no-scroll {
   .l-sidebar {
     margin: 0;
     padding: 0;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .p-sidebar__main-nav {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .l-main__right.is-open .p-sidebar__main-nav {
-    display: block;
   }
 }
 

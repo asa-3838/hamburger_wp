@@ -1,14 +1,14 @@
 @use "../foundation/base" as *;
 
 body.no-scroll {
-  overflow: hidden;
-}
-
-.l-main__wrapper {
-  display: flex;
+  position: fixed;
 }
 
 .l-main {
+  &__wrapper {
+    display: flex;
+  }
+  //ハンバーガーメニュー開いた時の背景マスク
   &__back {
     @include mq(tab) {
       background-color: rgba(0, 0, 0, 0.5);
@@ -57,6 +57,9 @@ body.no-scroll {
       @include mq(sp) {
         width: 87%;
       }
+    }
+    &.is-open::-webkit-scrollbar {  /* Chrome, Safari 対応 */
+      display:none;
     }
   }
 }
