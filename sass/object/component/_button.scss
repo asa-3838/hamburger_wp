@@ -21,3 +21,38 @@
     color: inherit;
   }
 }
+
+.c-bgimage_hamburger {
+  background: url(../images/takeout.png) no-repeat center/cover;
+  height: 239px;
+  @include mq(tab) {
+    height: 283px;
+  }
+  @include mq(sp) {
+    background-size: 250%;
+    background-position: left 13% top 46%;
+  } 
+}
+.c-bgimage_side {
+  background: url(../images/side_potate.jpg) no-repeat center/cover;
+  height: 239px;
+  @include mq(tab) {
+    height: 283px;
+  }
+  @include mq(sp) {
+    background-size: 250%;
+    background-position: left 13% top 46%;
+  } 
+}
+
+.c-bgimage_drink {
+  background: url(../images/drink_apple.jpg) no-repeat center/cover;
+  height: 239px;
+  @include mq(tab) {
+    height: 283px;
+  }
+  @include mq(sp) {
+    background-size: 250%;
+    background-position: left 13% top 46%;
+  } 
+}

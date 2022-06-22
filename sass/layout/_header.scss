@@ -2,6 +2,7 @@
 
 .l-header {
   width: 100%;
+  height: 100%;
   padding: 65px 31px 65px 65px;
   background-color: $bgcolor-header;
   @include mq(tab) {
@@ -9,5 +10,6 @@
   } 
   @include mq(sp) {
     padding: 14px 16px 40px 0;
+    margin-bottom: -6px;
   }
 }

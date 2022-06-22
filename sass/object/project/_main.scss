@@ -2,9 +2,10 @@
 
 .p-top-visual {
   background: url("../images/home-top.png") no-repeat center/cover;
+  vertical-align: middle;
   height: 530px;
+  overflow: hidden;
   @include mq(tab) {
-    overflow: hidden;
     height: 285px;
   }
   &__title {

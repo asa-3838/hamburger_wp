@@ -135,6 +135,7 @@ body {
 /* responsive */
 .l-header {
   width: 100%;
+  height: 100%;
   padding: 65px 31px 65px 65px;
   background-color: #fff7ef;
 }
@@ -146,6 +147,7 @@ body {
 @media screen and (max-width: 600px) {
   .l-header {
     padding: 14px 16px 40px 0;
+    margin-bottom: -6px;
   }
 }
 
@@ -278,6 +280,42 @@ body.no-scroll {
   }
 }
 
+.c-bgimage_hamburger {
+  background: url(../images/takeout.png) no-repeat center/cover;
+  height: 239px;
+}
+@media screen and (max-width: 1024px) {
+  .c-bgimage_hamburger {
+    height: 283px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .c-bgimage_hamburger {
+    background-size: 250%;
+    background-position: left 13% top 46%;
+  }
+}
+
+.c-bgimage_side {
+  background: url(../images/side_potate.jpg) no-repeat center/cover;
+  height: 239px;
+}
+@media screen and (max-width: 1024px) {
+  .c-bgimage_side {
+    height: 283px;
+  }
+}
+
+.c-bgimage_drink {
+  background: url(../images/drink_apple.jpg) no-repeat center/cover;
+  height: 239px;
+}
+@media screen and (max-width: 1024px) {
+  .c-bgimage_drink {
+    height: 283px;
+  }
+}
+
 .c-card-figure {
   display: flex;
   justify-content: space-between;
@@ -318,6 +356,54 @@ body.no-scroll {
   color: inherit;
 }
 
+.c-bgimage_hamburger {
+  background: url(../images/takeout.png) no-repeat center/cover;
+  height: 239px;
+}
+@media screen and (max-width: 1024px) {
+  .c-bgimage_hamburger {
+    height: 283px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .c-bgimage_hamburger {
+    background-size: 250%;
+    background-position: left 13% top 46%;
+  }
+}
+
+.c-bgimage_side {
+  background: url(../images/side_potate.jpg) no-repeat center/cover;
+  height: 239px;
+}
+@media screen and (max-width: 1024px) {
+  .c-bgimage_side {
+    height: 283px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .c-bgimage_side {
+    background-size: 250%;
+    background-position: left 13% top 46%;
+  }
+}
+
+.c-bgimage_drink {
+  background: url(../images/drink_apple.jpg) no-repeat center/cover;
+  height: 239px;
+}
+@media screen and (max-width: 1024px) {
+  .c-bgimage_drink {
+    height: 283px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .c-bgimage_drink {
+    background-size: 250%;
+    background-position: left 13% top 46%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .c-grid {
     grid-template-columns: 1fr 1fr;
@@ -344,7 +430,6 @@ body.no-scroll {
 }
 @media screen and (max-width: 600px) {
   .p-archive__top {
-    height: 283px;
     background-size: 250%;
     background-position: left 13% top 46%;
   }
@@ -852,11 +937,12 @@ body.no-scroll {
 
 .p-top-visual {
   background: url("../images/home-top.png") no-repeat center/cover;
+  vertical-align: middle;
   height: 530px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1024px) {
   .p-top-visual {
-    overflow: hidden;
     height: 285px;
   }
 }
